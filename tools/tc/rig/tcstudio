@@ -1,0 +1,194 @@
+#!/bin/bash
+# tcstudio: an isolated, ONLINE Roblox Studio for capturing Team Create traffic.
+#
+#   tcstudio up            headless gamescope -> pasta netns (internet, CAP_NET_RAW) -> uid-mapped userns keeper
+#   tcstudio run CMD...    run CMD inside it as you, with the capture home's env (HOME, DISPLAY, private bus, Wine)
+#   tcstudio studio [ARGS] Studio (the user's 0.746 build, copied) in the capture prefix
+#   tcstudio chromium      the capture Chromium (profile under $B/chromium, CDP on 127.0.0.1:9444 inside the netns)
+#   tcstudio cap NAME      tcpdump -i any -> $B/cap/NAME.pcap (as namespace root; runs until `tcstudio capstop`)
+#   tcstudio capstop       stop tcpdump
+#   tcstudio x CMD...      run an X client (xdotool, import) against the gamescope display, from the host
+#   tcstudio down          stop everything this rig started (only its own processes)
+#
+# Nothing here touches the host's own Studio install or prefix: Studio is a copy of their version dir, the prefix is a
+# copy of the offline Studio's (WebView2) with the saved logins stripped and its AppData repointed (strip_creds.py, fix_prefix.py).
+# Studio signs in through "Login via Browser": the capture home's xdg-open sends https to the capture Chromium and
+# roblox-studio-auth: back to this Studio. Never inject the cookie into Studio's credentials.
+set -euo pipefail
+B=${TC_BASE:-$HOME/.cache/rustudio-dev/tc}
+H=$B/studio-home
+R=$B/run
+SELF=$(realpath "$0")
+WINE_ROOT=${TC_WINE:-$HOME/.var/app/org.vinegarhq.Vinegar/data/vinegar/kombucha}
+IFACE=${TC_IFACE:-wlan0}
+# the host uid/gid, fixed at `up` and handed down (inside pasta's namespace `id -u` is 0)
+export TC_UID=${TC_UID:-$(id -u)} TC_GID=${TC_GID:-$(id -g)}
+OUTER_UID=$TC_UID
+OUTER_GID=$TC_GID
+
+uenv() {
+	local gs=()
+	mapfile -t gs <"$R/gs.env"
+	exec env -i HOME="$H" USER="$USER" LOGNAME="$USER" PATH="$H/bin:/usr/local/bin:/usr/bin:/bin" \
+		LANG="${LANG:-en_US.UTF-8}" DISPLAY="$(cat "$R/display")" "${gs[@]}" \
+		SHELL=/bin/bash TERM=xterm-256color XDG_SESSION_TYPE=x11 XDG_CURRENT_DESKTOP=Hyprland \
+		XDG_DATA_DIRS=/usr/local/share:/usr/share XDG_CONFIG_DIRS=/etc/xdg XCURSOR_SIZE=24 \
+		XDG_CONFIG_HOME="$H/.config" XDG_DATA_HOME="$H/.local/share" XDG_CACHE_HOME="$H/.cache" \
+		DBUS_SESSION_BUS_ADDRESS="unix:path=$R/bus" \
+		WINEPREFIX="$B/prefix" WINEDEBUG="${WINEDEBUG:--all}" WINEESYNC=1 WINEFSYNC=1 \
+		WINEDLLOVERRIDES="d3d11,d3d10core,dxgi,d3d9=n,b;winemenubuilder.exe=d" \
+		TC_BASE="$B" TC_WINE="$WINE_ROOT" ${TC_EXTRA_ENV:-} "$@"
+}
+
+case "${1:-}" in
+up)
+	mkdir -p "$R" "$H/bin" "$B/cap"
+	[[ -e $R/userpid ]] && kill -0 "$(cat "$R/userpid")" 2>/dev/null && { echo "already up"; exit 0; }
+	rm -f "$R/display" "$R/rootpid" "$R/userpid"
+	setsid gamescope --backend headless -W 1600 -H 900 -- "$SELF" _ns >"$R/gamescope.log" 2>&1 </dev/null &
+	for _ in $(seq 1 60); do [[ -s $R/userpid ]] && break; sleep 0.5; done
+	[[ -s $R/userpid ]] || { echo "did not come up; see $R/gamescope.log"; exit 1; }
+	echo "up: display $(cat "$R/display"), root pid $(cat "$R/rootpid"), user pid $(cat "$R/userpid")"
+	;;
+_ns)
+	# inside gamescope (host netns): remember its X display, then the network namespace
+	echo "$DISPLAY" >"$R/display"
+	# gamescope's WSI layer finds gamescope through these and XDG_RUNTIME_DIR; without them Wine's explorer dies
+	# silently while enumerating GPUs ("no driver could be loaded")
+	{ env | grep -E '^(GAMESCOPE_|ENABLE_GAMESCOPE_WSI=|vk_|SDL_VIDEO_|XWAYLAND_)'; echo "XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR"; } >"$R/gs.env"
+	# SAFETY: -T none -U none and --no-map-gw stop the namespace's loopback and gateway traffic from reaching
+	# host services. Without them, the rig Studio's Argon plugin reached the USER's Argon on 127.0.0.1:8000/8005
+	# (2026-11-04). Verify after `up`: inside the netns, curl 127.0.0.1:8000 and :8005 must FAIL.
+	exec pasta --config-net --no-pidns -4 -i "$IFACE" --outbound-if4 "$IFACE" \
+		-T none -U none --no-map-gw -- "$SELF" _root
+	;;
+_root)
+	# fake root in pasta's user + net namespace: this is where tcpdump runs
+	# stays alive (not exec) so a process remains in the outer userns that owns the netns
+	echo $$ >"$R/rootpid"
+	unshare --user --map-user="$OUTER_UID" --map-group="$OUTER_GID" "$SELF" _keep &
+	wait
+	;;
+_keep)
+	echo $$ >"$R/userpid"
+	mkdir -p "$R/xdg" && chmod 700 "$R/xdg"
+	rm -f "$R/bus"
+	dbus-daemon --session --address="unix:path=$R/bus" --fork --nopidfile >/dev/null
+	exec sleep infinity
+	;;
+run)
+	shift
+	TC_NSENTER=1 nsenter -t "$(cat "$R/userpid")" -U -n --preserve-credentials "$SELF" _env "$@"
+	;;
+runroot)
+	# enter pasta's (outer) user+net namespace, where our host uid maps to uid 0 with full caps
+	# (CAP_SYS_PTRACE over the inner Studio processes, so /proc/<pid>/mem is readable). For the memory key
+	# dump only. Still fully confined to the rig's namespaces; it is NOT host root.
+	shift
+	nsenter -t "$(cat "$R/rootpid")" -U -n --preserve-credentials -- "$@"
+	;;
+_env)
+	shift
+	uenv "$@"
+	;;
+studio)
+	shift
+	cd "$B/studio"
+	# a Wine virtual desktop the size of the gamescope (as the offline Studio's hidden mode): a bare window on headless
+	# gamescope fails CreateWindowEx
+	exe="$B/studio/RobloxStudioBeta.exe"
+	exec "$SELF" run "$WINE_ROOT/bin/wine" explorer "/desktop=tcstudio,1600x900" "Z:${exe//\//\\}" "$@"
+	;;
+chromium)
+	shift
+	exec "$SELF" run chromium --user-data-dir="$B/chromium" --password-store=basic --no-first-run \
+		--no-default-browser-check --remote-debugging-port=9444 --remote-debugging-address=127.0.0.1 \
+		${TC_CHROMIUM_MODE:---headless=new} "$@"
+	;;
+cap)
+	name=$2
+	nsenter -t "$(cat "$R/rootpid")" -U -n --preserve-credentials \
+		tcpdump -i any -U -s 0 -w "$B/cap/$name.pcap" >"$R/tcpdump.log" 2>&1 &
+	echo $! >"$R/tcpdump.pid"
+	sleep 1
+	cat "$R/tcpdump.log"
+	;;
+capstop)
+	kill "$(cat "$R/tcpdump.pid")" 2>/dev/null || true
+	sleep 1
+	cat "$R/tcpdump.log"
+	;;
+x)
+	shift
+	DISPLAY=$(cat "$R/display") "$@"
+	;;
+key)
+	# focus the Wine desktop and send keys through XTEST (xdotool key syntax), e.g. `tcstudio key Return`
+	shift
+	export DISPLAY=$(cat "$R/display")
+	w=$(xdotool search --name 'tcstudio - Wine Desktop' | head -1)
+	xdotool windowactivate --sync "$w" 2>/dev/null || xdotool windowfocus --sync "$w"
+	xdotool key --delay 120 "$@"
+	;;
+click)
+	# move the pointer to X Y on the gamescope screen and click (button ${4:-1})
+	export DISPLAY=$(cat "$R/display")
+	w=$(xdotool search --name 'tcstudio - Wine Desktop' | head -1)
+	xdotool windowactivate --sync "$w" 2>/dev/null || true
+	xdotool mousemove --sync "$2" "$3" sleep 0.3 mousedown "${4:-1}" sleep 0.15 mouseup "${4:-1}"
+	;;
+gs)
+	# a gamescope control command against this rig's gamescope (e.g. `tcstudio gs gamescopectl screenshot F`)
+	shift
+	env $(grep -E '^(GAMESCOPE_WAYLAND_DISPLAY|XDG_RUNTIME_DIR)=' "$R/gs.env") "$@"
+	;;
+shot)
+	# composited screenshot of the gamescope screen (GPU content included) -> $2
+	out=$2
+	rm -f "$out"
+	"$SELF" gs gamescopectl screenshot "$out" >/dev/null 2>&1 || true
+	for _ in $(seq 1 20); do [[ -s $out ]] && break; sleep 0.25; done
+	[[ -s $out ]] || DISPLAY=$(cat "$R/display") magick x:root "$out"
+	ls -la "$out"
+	;;
+ps)
+	# this rig's processes only (matched by the prefix in their environment)
+	for p in /proc/[0-9]*; do
+		[[ -O $p ]] || continue
+		{ tr '\0' '\n' <"$p/environ"; } 2>/dev/null | grep -qx "WINEPREFIX=$B/prefix" &&
+			echo "${p#/proc/} $(tr '\0' ' ' <"$p/cmdline" 2>/dev/null | cut -c1-150)"
+	done
+	;;
+ckill)
+	# stop this rig's Chromium only. Chromium rewrites its environ, so match its own command line; the [u]
+	# keeps the pattern from matching the shell that runs this search
+	for p in $(pgrep -u "$TC_UID" -f "[u]ser-data-dir=$B/chromium"); do
+		[[ $(readlink "/proc/$p/exe" 2>/dev/null) == /usr/lib/chromium/* ]] && kill "$p" 2>/dev/null
+	done
+	echo "chromium stopped"
+	;;
+wkill)
+	# stop this rig's Wine processes (Studio, WebView2, wineserver) but keep the namespaces and Chromium
+	for p in /proc/[0-9]*; do
+		[[ -O $p ]] || continue
+		{ tr '\0' '\n' <"$p/environ"; } 2>/dev/null | grep -qx "WINEPREFIX=$B/prefix" || continue
+		tr '\0' ' ' <"$p/cmdline" 2>/dev/null | grep -q chromium && continue
+		kill "${p#/proc/}" 2>/dev/null || true
+	done
+	echo stopped
+	;;
+down)
+	kill "$(cat "$R/tcpdump.pid" 2>/dev/null)" 2>/dev/null || true
+	# Wine processes of this prefix only: matched by their WINEPREFIX, never by name
+	for p in /proc/[0-9]*; do
+		[[ -O $p ]] || continue
+		{ tr '\0' '\n' <"$p/environ"; } 2>/dev/null | grep -qx "WINEPREFIX=$B/prefix" && kill "${p#/proc/}" 2>/dev/null || true
+	done
+	for f in userpid rootpid; do [[ -s $R/$f ]] && kill "$(cat "$R/$f")" 2>/dev/null || true; done
+	echo down
+	;;
+*)
+	sed -n '2,12p' "$0" | sed 's/^# \{0,1\}//'
+	exit 1
+	;;
+esac

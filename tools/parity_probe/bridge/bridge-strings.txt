@@ -1,0 +1,82 @@
+0x148a684e8	Unable to cast %s to %s
+0x148a6af20	Unable to cast {} to {}
+0x148a9a2a0	Unable to assign property %s. Property is read only
+0x148a9aa88	Argument %d missing or nil
+0x148be2f28	Argument 1 missing or nil
+0x148d82d40	Unable to cast value to Object
+0x148d82d60	Unable to cast value to Objects
+0x148f23300	invalid argument #%d to '%s' (%s)
+0x148f23328	invalid argument #%d (%s)
+0x148f23348	invalid argument #%d to '%s' (%s expected, got %s)
+0x148f23380	invalid argument #%d (%s expected, got %s)
+0x148f233b0	missing argument #%d to '%s' (%s expected)
+0x148f233e0	missing argument #%d (%s expected)
+0x148f23428	missing argument #%d
+0x1490eedd8	EnumItem
+0x1490eede8	GetEnums
+0x1490eedf8	%s is not a valid member of "Enum"
+0x1490eee20	GetEnumItems
+0x1490eee30	FromName
+0x1490eee40	FromValue
+0x1490eee50	%s is not a valid member of "Enum.%s"
+0x1490eee78	EnumType
+0x1490eee88	%s is not a valid member of "Enum.%s.%s"
+0x1490eeeb8	Enum.%s.%s
+0x1490ef3c0	CoreStrengthIsImportant
+0x1490ef3d8	ModuleScriptCompactSourceHash
+0x1490efcb0	[FLog::Error] Exception caught during ModuleScript reference weakening. {}
+0x1490efd00	DebugDisableLuaBridgeMethodProfiling
+0x1490efd28	DebugDisableLuaBridgePropertyProfiling
+0x1490efd50	InvalidNumPropertyAssignReportHundredthsPercentage
+0x1490efd88	AuroraScriptAPI
+0x1490efd98	luau-telemetry.number-assign
+0x1490efdb8	InvalidEnumValueAttemptToReflect
+0x1490efde0	InvalidEnumValueAttemptToReflectReportHundredthsPercentage
+0x1490efe20	LuauFixEnumPropertyAssignmentErrorType
+0x1490efec8	Unable to assign property %s. %s
+0x1490efef0	Property %s.%s is not safe to read in parallel
+0x1490eff20	[DFLog::AuroraScriptAPI] {} {}.{} is not safe for use in AuroraScripts and may cause mispredictions
+0x1490eff90	{} {}.{} is not safe for use in AuroraScripts and may cause mispredictions
+0x1490effe0	Writing to {}.{} is not allowed for simulation callbacks
+0x1490f0020	Writing to {}.{} is not allowed for simulation callbacks on Instances in the DataModel
+0x1490f0078	{} {}.{} is not allowed for simulation callbacks
+0x1490f00b0	Reading from
+0x1490f00c0	Writing to
+0x1490f00d0	LocalSafe property %s.%s is not safe to write in parallel from script that is not part of the same Actor
+0x1490f0140	Object of type %s must be part of an Actor for LocalSafe property %s.%s to be writable in parallel
+0x1490f01a8	Property %s.%s is not safe to write in parallel
+0x1490f01e0	LocalSafe function %s.%s is not safe to call in parallel from script that is not part of the same Actor
+0x1490f0250	Object of type %s must be part of an Actor for LocalSafe function %s.%s to be callable in parallel
+0x1490f02b8	Function %s.%s is not safe to call in parallel
+0x1490f02e8	Event %s.%s is not safe to access in parallel
+0x1490f0318	Callback %s.%s is not safe to access in parallel
+0x1490f0350	Unable to query property %s. It is not scriptable
+0x1490f0388	Unable to get property %s, type %s
+0x1490f03b0	Enum_Name
+0x1490f03c0	Enum_Value
+0x1490f03d0	Unable to assign property %s. It is not scriptable
+0x1490f0408	Unable to assign property %s, type %s
+0x1490f0430	Unable to assign property %s. EnumItem of type %s expected, got an EnumItem of type %s
+0x1490f0488	Unable to assign property %s. Invalid value %d for enum %s
+0x1490f04c8	Unable to assign property %s. Invalid value "%s" for enum %s
+0x1490f0510	Unable to assign property %s. EnumItem, number, or string expected, got %s
+0x1490f0560	Unable to assign property %s. %s expected, got %s
+0x1490f0598	Unable to set property %s, type %s
+0x1490f05bc	assign
+0x1490f05c8	InvalidInstance
+0x1490f05d8	$call
+0x1490f05e0	Expected ':' not '.' calling member function %s
+0x1490f0610	$newindex
+0x1490f0620	The object has been deleted
+0x1490f0640	%s is not a valid member of %s "%s"
+0x1490f0664	$index
+0x1490f0670	Instance.__index
+0x1490f0688	$namecall
+0x1490f06a0	Trying to call method on object of type: `%s` with incorrect arguments.
+0x1490f06e8	%s is not a valid member of %s
+0x1490f0708	%s expected, got %s
+0x1490f0720	%s is a callback member of %s; you can only set the callback value, get is not available
+0x1491cdee8	Argument 2 missing or nil
+0x1491cdf20	Argument 3 missing or nil
+0x1491cdf40	Argument 4 missing or nil
+0x149582d88	[FLog::Error] Unable to cast root instance to MeshPart.

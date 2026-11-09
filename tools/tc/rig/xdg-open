@@ -1,0 +1,21 @@
+#!/bin/bash
+# xdg-open for the capture home (installed as $TC_BASE/studio-home/bin/xdg-open by tcstudio's caller).
+# Wine's winebrowser calls it for Studio's "Login via Browser": https goes to the capture Chromium (CDP 9444),
+# roblox-studio-auth:/roblox-studio: go back to the capture Studio. Logs the scheme only: the auth redirect
+# carries a one-time code.
+B=${TC_BASE:?}
+url=${1:-}
+echo "$(date +%T) xdg-open ${url%%:*}:" >>"$B/run/xdg-open.log"
+case "$url" in
+roblox-studio-auth:* | roblox-studio:*)
+	cd "$B/studio" && exec "$TC_WINE/bin/wine" "$B/studio/RobloxStudioBeta.exe" "$url"
+	;;
+http://* | https://*)
+	# the capture Chromium runs headless (it must not take gamescope's only visible slot); open a tab over CDP
+	exec node "$B/rig/cdp.mjs" 9444 open "$url"
+	;;
+*)
+	echo "  (unhandled)" >>"$B/run/xdg-open.log"
+	exit 1
+	;;
+esac

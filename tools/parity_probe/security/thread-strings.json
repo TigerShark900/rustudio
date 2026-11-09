@@ -1,0 +1,222 @@
+[
+  [
+    "0x148a68e48",
+    "id=%s&permissionContext=ignoreUniverse"
+  ],
+  [
+    "0x148a6a8e8",
+    "/v1/universes/%s/permissions"
+  ],
+  [
+    "0x148a6b380",
+    "asset-permissions-api/v1/assets/%lld/permissions"
+  ],
+  [
+    "0x148a92de0",
+    "Server Error 500. Permissions to asset %lld cannot be retrieved at this time. Please check again later."
+  ],
+  [
+    "0x148aa9ee0",
+    "World::assemble - current thread should have a write lock when assembling the world"
+  ],
+  [
+    "0x148b15d78",
+    "[FLog::LogFileSyncItem] %s: permission: %s"
+  ],
+  [
+    "0x148d2b808",
+    "Unable to query permissions for asset %lld"
+  ],
+  [
+    "0x148d75700",
+    "The current thread cannot {} '{}' since '{}' has the Sandboxed property set to false but the calling thread is sandboxed"
+  ],
+  [
+    "0x148d75780",
+    "The current thread cannot {} since the target has the Sandboxed property set to false but the calling thread is sandboxed"
+  ],
+  [
+    "0x148d75800",
+    "The current thread cannot {} '{}' - the target uses APIs not available in the current sandbox"
+  ],
+  [
+    "0x148d75860",
+    "The current thread cannot {} - the target uses APIs not available in the current sandbox"
+  ],
+  [
+    "0x148d758f0",
+    "The current thread cannot {} '{}' ({} {})"
+  ],
+  [
+    "0x148d75920",
+    "The current thread cannot {} ({} {})"
+  ],
+  [
+    "0x148d80510",
+    "Attempt to assign attribute %s. CoreScript permission required"
+  ],
+  [
+    "0x1490ee3f0",
+    "Current thread doesn't have permissions to access child {} of class {}"
+  ],
+  [
+    "0x1490f0990",
+    "The current thread cannot {} '{}' since '{}' has additional values for the Capabilities property: {} (and {} more)"
+  ],
+  [
+    "0x1490f0a10",
+    "The current thread cannot {} '{}' since '{}' has an additional value for the Capabilities property: {}"
+  ],
+  [
+    "0x1490f0a80",
+    "The current thread cannot {} '{}' - the target can use APIs not available in the current sandbox"
+  ],
+  [
+    "0x1490f0af0",
+    "The current thread cannot reparent '{}' to '{}' since '{}' has the Sandboxed property set to false but the calling thread is sandboxed"
+  ],
+  [
+    "0x1490f0b80",
+    "The current thread cannot reparent '{}' to '{}' since '{}' has additional values for the Capabilities property: {} (and {} more)"
+  ],
+  [
+    "0x1490f0c10",
+    "The current thread cannot reparent '{}' to '{}' since '{}' has an additional value for the Capabilities property: {}"
+  ],
+  [
+    "0x1490f0c90",
+    "The current thread cannot reparent '{}' to '{}' - target location is not Sandboxed"
+  ],
+  [
+    "0x1490f0cf0",
+    "The current thread cannot reparent '{}' to '{}' - target location has access to additional capabilities: {} (and {} more)"
+  ],
+  [
+    "0x1490f0d70",
+    "The current thread cannot reparent '{}' to '{}' - target location has access to additional capability: {}"
+  ],
+  [
+    "0x1490f7070",
+    "The currently executing script thread is not associated with an Actor even though the script is parented to an Actor. This may indicate the current thread was created prior to the script being parented under an Actor."
+  ],
+  [
+    "0x1490f7230",
+    "The currently executing script thread is associated with an Actor that is different from the script's Actor. This may indicate the current thread was created prior to the script being parented under its current Actor."
+  ],
+  [
+    "0x14910ac70",
+    "The current thread cannot (.+?)(?: '(.+?)')?(?: to '(.+?)')? (?:\\((?:lacking|cannot use) capability (\\w+)\\)|- target location (?:is not Sandboxed|has access to additional capabilit(?:y|ies): (\\w+))|- the target has (?:an )?additional capabilit(?:y|ies): (\\w+)|- the target (?:uses|can use) APIs not available in the current sandbox|since (?:'.+?'|the target) has (?:the Sandboxed property set to false but the calling thread is sandboxed|(?:an )?additional value(?:s)? for the Capabilities property: (\\w+)))"
+  ],
+  [
+    "0x1491269c0",
+    "Datamodel: %p, job %s, instance %s (%p)[%s], dm amInParallelPhase: %d, dm currentThreadHasWriteLock: %d, write requesting thread: %llu, current thread: %llu, cookie: %llX, history:"
+  ],
+  [
+    "0x1491800f0",
+    "Invalid argument to GetPermissions: assetId must convert to an integer. Got \"%s\""
+  ],
+  [
+    "0x149180190",
+    "Invalid argument to SetPermissions: assetId must convert to an integer. Got \"%s\""
+  ],
+  [
+    "0x1491abbb0",
+    "Unknown Permission Type %d"
+  ],
+  [
+    "0x1491abbd0",
+    "Error reading permission from table: Type \"%s\" is not valid."
+  ],
+  [
+    "0x1491abc50",
+    "Error reading permission from table: missing %s."
+  ],
+  [
+    "0x1491abc88",
+    "Error reading permission from table: %s is invalid."
+  ],
+  [
+    "0x14925d690",
+    "HttpService permission denied on domain %s for plugin %lld."
+  ],
+  [
+    "0x1492726f0",
+    "[DFLog::Package] Package permission request result for package %lli set to: %s"
+  ],
+  [
+    "0x149272b30",
+    "Package Asset %lld Permission Error: %s"
+  ],
+  [
+    "0x149272b58",
+    "[DFLog::Package] package asset %lld permission error: %s"
+  ],
+  [
+    "0x149272bf8",
+    "[FLog::Error] %s Failed to parse Package Permission Data: %s"
+  ],
+  [
+    "0x149272c38",
+    "Failed to parse Package Permission Data: %s"
+  ],
+  [
+    "0x1492cc510",
+    "[DFLog::AvatarChatServiceTrace] [AvatarChatService::fetchUserPermissions] Invoke [user_id: %lld]."
+  ],
+  [
+    "0x149479710",
+    "Failed to write test file %s. Do you have the write permission?"
+  ],
+  [
+    "0x149479750",
+    "Failed to remove test file %s. Do you have the write permission?"
+  ],
+  [
+    "0x1495c15e0",
+    "/asset-permissions-api/v1/assets/%s/permissions"
+  ],
+  [
+    "0x1495c6e30",
+    "[FLog::BulkImport] Upload Video Permission Initialized - filesize: %lld checksum: %s body: %s"
+  ],
+  [
+    "0x1495e0210",
+    "[FLog::VoiceChatLogs] VoiceChatInternal API security check failed"
+  ],
+  [
+    "0x1495e0858",
+    "VoiceChatInternal API security check failed"
+  ],
+  [
+    "0x1496b5810",
+    "[FLog::Error] Cannot check if package %ll is modified because the request for permissions failed"
+  ],
+  [
+    "0x1496c59b0",
+    "[FLog::AssetPrivacyPermissionsManager] Setting %llu assets in asset privacy grant on publish cache"
+  ],
+  [
+    "0x1496c5a30",
+    "[FLog::AssetPrivacyPermissionsManager] Universe [%llu] was granted access to %llu assets"
+  ],
+  [
+    "0x1496c5b00",
+    "[FLog::AssetPrivacyPermissionsManager] Batch grant asset permissions failed: %s"
+  ],
+  [
+    "0x1496c5c50",
+    "[FLog::Error] getAssetsWithNoPermission: Fetching asset permission failed. Error message: %s"
+  ],
+  [
+    "0x14ac90838",
+    "/studio-user-settings/plugin-permissions/%lld"
+  ],
+  [
+    "0x14adda730",
+    "[FLog::Error] ParallelLuauHybridCaller::callInParallel called with callback in a VM that's not active for the current thread."
+  ],
+  [
+    "0x14ae69228",
+    "begin write in current thread"
+  ]
+]

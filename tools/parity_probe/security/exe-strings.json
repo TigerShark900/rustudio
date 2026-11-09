@@ -1,0 +1,35 @@
+{
+  "sha256": "81be5bc2916ba979e0ecc68b5fd039a48821765c6e9a7bcfd8d27ad877cf1692",
+  "strings": [
+    {
+      "offset": "0x8d73cd8",
+      "va": "0x148d758d8",
+      "text": "lacking capability"
+    },
+    {
+      "offset": "0x90f84a0",
+      "va": "0x1490fa0a0",
+      "text": "Cannot start server script '%s' (lacking capability RunServerScript)"
+    },
+    {
+      "offset": "0x90f84f0",
+      "va": "0x1490fa0f0",
+      "text": "Cannot start client script '%s' (lacking capability RunClientScript)"
+    },
+    {
+      "offset": "0x910a948",
+      "va": "0x14910c548",
+      "text": "Current identity is %d"
+    },
+    {
+      "offset": "0x94bffa0",
+      "va": "0x1494c1ba0",
+      "text": "[ScriptModificationTracking] UpdateSourceAsync pluginId=%s pluginUri=%s securityLevel=%d securityAssetId=%lld"
+    },
+    {
+      "offset": "0x9566740",
+      "va": "0x149568340",
+      "text": "Authority (host) '%s' != Fake Security Target override '%s'"
+    }
+  ]
+}

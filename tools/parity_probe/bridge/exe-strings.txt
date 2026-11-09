@@ -1,0 +1,340 @@
+SHA256 81be5bc2916ba979e0ecc68b5fd039a48821765c6e9a7bcfd8d27ad877cf1692
+0x148a684e8	Unable to cast %s to %s
+0x148a6af20	Unable to cast {} to {}
+0x148a9a2a0	Unable to assign property %s. Property is read only
+0x148a9aa88	Argument %d missing or nil
+0x148ab4b80	Part must be a Part.
+0x148b10240	color-sequence(): invalid argument structure
+0x148b10300	color-sequence(): invalid argument count
+0x148be2f28	Argument 1 missing or nil
+0x148be3a00	[FLog::Error] Invalid argument to setSourceAssetIdOnResults: assetId must convert to an integer. Got "%s"
+0x148bf22c0	Context must be an Instance.
+0x148bff418	Argument 1 must be a GuiButton
+0x148bff5d0	Instance must be a Part
+0x148c050e8	Instance must be a descendant of a ScreenGui.
+0x148c08498	%s: PlacementId must be a number > 0, got: %lld
+0x148c084c8	%s: ActivationInstance must be a TextButton or ImageButton
+0x148c4d0e0	ANR Detector is designed to start the monitoring thread only once and stop it on shutdown. If the thread needs to be stopped and then restarted use pause/resume methods.
+0x148c5bb98	First argument to %s must be a player
+0x148c68398	First argument to PromptPremiumPurchase must be a Player
+0x148c6ad30	First argument to CanUsersTransferRobuxAsync must be a Player
+0x148c6ad70	receiverUser must be a User with a positive user id
+0x148c6af98	First argument to PromptRobuxTransferAsync must be a Player
+0x148c6aff8	receiverUserId must be a positive integer
+0x148c6b038	amount must be a positive integer
+0x148c6fc90	%s Item %zu TimedOption Value must be a positive number of seconds.
+0x148ca3fd8	ControlValue must be a boolean, a number or a string
+0x148ca4378	StudioDeviceSimulatorService: %s must be a non-empty array
+0x148ca5f18	ControlValueUpdate must be a table
+0x148cabce0	Network Simulator staged control value must be a number
+0x148cabd18	Network Simulator staged preset must be a string
+0x148cabd50	Network Simulator control value must be a number
+0x148cabd88	Network Simulator preset must be a string
+0x148ce2cb8	Invalid arguments to updateScriptSourceAsync
+0x148ce3ab0	Settings must be a table
+0x148d09b20	Instance must be a GuiBase2d
+0x148d0ade8	Source URI must be a Widget URI
+0x148d6a160	tRNS must be after
+0x148d6a178	hIST must be after
+0x148d6a190	bKGD must be after
+0x148d77288	ColorSequence: time must be a valid number
+0x148d79218	NumberSequence: time must be a valid number
+0x148d7ffb0	Invalid argument to IsPropertyModified(): Class {} has no property named `{}`
+0x148d80000	Invalid argument to IsPropertyModified(): {}.{} is read-only
+0x148d80040	Invalid argument to IsPropertyModified(): {}.{} is write-only
+0x148d800e0	Invalid argument to ResetPropertyToDefault(): {}.{} is read-only
+0x148d80130	Invalid argument to ResetPropertyToDefault(): Class {} has no property named `{}`
+0x148d82d40	Unable to cast value to Object
+0x148d82d60	Unable to cast value to Objects
+0x148df65f8	second argument to nth_value must be a positive integer
+0x148df6630	frame starting offset must be a non-negative integer
+0x148df6668	frame ending offset must be a non-negative integer
+0x148df66a0	frame starting offset must be a non-negative number
+0x148df66d8	frame ending offset must be a non-negative number
+0x148df8f20	second argument to %#T() must be a constant between 0.0 and 1.0
+0x148dfafe0	ESCAPE expression must be a single character
+0x148dfc2e8	argument of ntile must be a positive integer
+0x148dfd658	passed invalid argument
+0x148e2fb80	The passed EVP_PKEY must be assigned a key
+0x148e4b910	invalid argument
+0x148e4c430	write to read only BIO
+0x148e55628	path must be absolute
+0x148f0a670	Invalid argument
+0x148f1c250	Assigned expression must be a variable or a field
+0x148f1c880	All declaration parameters aside from 'self' must be annotated
+0x148f1c948	All declaration parameters must be annotated
+0x148f23300	invalid argument #%d to '%s' (%s)
+0x148f23328	invalid argument #%d (%s)
+0x148f23348	invalid argument #%d to '%s' (%s expected, got %s)
+0x148f23380	invalid argument #%d (%s expected, got %s)
+0x148f23820	invalid 'for' %s (number expected, got %s)
+0x148f34b20	Fields with proto3_optional set must be a member of a one-field oneof
+0x148f34b68	Synthetic oneofs must be after all other oneofs
+0x148f34e60	Default value for an enum field must be an identifier.
+0x148fed310	[DFLog::VideoAdaption] AbrSelectorConfig: selector node must be a string or single-member object, got {} members
+0x1490ed8a0	%s is not a valid member
+0x1490eedf8	%s is not a valid member of "Enum"
+0x1490eee50	%s is not a valid member of "Enum.%s"
+0x1490eee88	%s is not a valid member of "Enum.%s.%s"
+0x1490efec8	Unable to assign property %s. %s
+0x1490f03d0	Unable to assign property %s. It is not scriptable
+0x1490f0408	Unable to assign property %s, type %s
+0x1490f0430	Unable to assign property %s. EnumItem of type %s expected, got an EnumItem of type %s
+0x1490f0488	Unable to assign property %s. Invalid value %d for enum %s
+0x1490f04c8	Unable to assign property %s. Invalid value "%s" for enum %s
+0x1490f0510	Unable to assign property %s. EnumItem, number, or string expected, got %s
+0x1490f0560	Unable to assign property %s. %s expected, got %s
+0x1490f05e0	Expected ':' not '.' calling member function %s
+0x1490f0640	%s is not a valid member of %s "%s"
+0x1490f06e8	%s is not a valid member of %s
+0x1490f0708	%s expected, got %s
+0x1490f49e0	%s cannot be assigned to
+0x1490f4d70	timeout must be a number
+0x1490f6780	%s member of %s is read-only and cannot be assigned to
+0x1490f67b8	'%s' is not a valid member of %s
+0x1490f6d68	%s is not a valid member of RBXScriptSignal
+0x1490f7440	%s is not a valid member of RBXScriptConnection
+0x1490fba80	First argument to ScriptProfilerClientStart must be a valid Player
+0x1490fbb30	First argument to ScriptProfilerClientStop must be a valid Player
+0x1490fce80	ScriptDebugger must be a child of DebuggerManager
+0x1490fde00	Must be attached to DataModel to initialize
+0x149101cb0	DebuggerWatch must be a child of ScriptDebugger
+0x149102a60	Breakpoints must be a child of ScriptDebugger
+0x149104530	First argument must be an Instance
+0x149108ef8	Attempted to call loadmodule with invalid argument(s).
+0x14910ba40	Field '{}' is an enum, but its default value is a '{}'. Default values for enum fields must be an EnumItem (e.g., Enum.MyEnum.Value).
+0x14910bbc0	The table argument for 'Behavior.DeclareField' that has a 'FixedArray' key must be a positive integer
+0x14910c618	Attempted to call require with invalid argument(s).
+0x149120b68	Child of PluginDebugService must be a Plugin.
+0x149120b98	Child of PluginDebugService must be a debuggable Plugin.
+0x149123f50	CSG: Part is not archivable. The clone feature is used for async processing so parts must be archivable (error {})
+0x1491422e0	Team:GetPlayers() failed because team must be a child of the Teams service
+0x14914c040	userLayers parameter for RegisterUserLayers must be a string or an array of strings.
+0x14914c100	creatorLayers parameter for RegisterCreatorLayers must be a string or an array of strings.
+0x14915bba8	partOrCharacter must be a Part or a Character
+0x1491635e8	Each dimension of sizeInVoxels must be a positive number.
+0x149163668	Argument 1 must be a dictionary in channel ids
+0x149163710	Argument 1 must be array of channel ids
+0x14916b4c0	The value of MaxTokens must be at least 1.
+0x14916c8c8	: every pending id must be a string
+0x14916d0f8	%s: message must be a string or nil, got %s.
+0x1491800f0	Invalid argument to GetPermissions: assetId must convert to an integer. Got "%s"
+0x149180190	Invalid argument to SetPermissions: assetId must convert to an integer. Got "%s"
+0x149189820	Value for attribute '{}' must be a string
+0x149189888	Value for attribute '{}' must be a number
+0x149189a80	Custom server attribute must be a table
+0x14918c440	Invalid arguments for subscription.
+0x149194950	[FLog::ExperienceAuthService] Invalid arguments for scopeCheckResult event.
+0x1491956f0	Unable to find content provider, EditableImage must be a descendant of the DataModel
+0x149196560	%s: projectionSource must be an EditableMesh or WrapTextureTransfer
+0x1491977e0	DialogChoice must be a child of this dialog root
+0x14919b180	{} cannot be assigned to
+0x1491a2ee0	InstanceRegistryService:GetIdentity scopeRoot must be a package root or the DataModel
+0x1491b8ba0	] must be a number
+0x1491b8bc8	] must be a positive integer
+0x1491c93b8	ScopeTime is not a valid member of TestService
+0x1491c9610	RegisterTest: field '%s' must be a string
+0x1491c96d0	TestService registration: 'Tags' must be an array of strings.
+0x1491c9710	TestService registration: every entry in 'Tags' must be a string.
+0x1491c9758	TestService registration: 'TimeoutSec' must be a number.
+0x1491c9a40	TestService:RunTestsAsync: filter field 'Suite' must be a string.
+0x1491c9a90	TestService:RunTestsAsync: filter field 'TestId' must be a string.
+0x1491c9af0	TestService:RunTestsAsync: filter field 'NamePattern' must be a string.
+0x1491c9b50	TestService:RunTestsAsync: filter field 'IncludeTags' must be an array of strings.
+0x1491c9bb0	TestService:RunTestsAsync: every entry in filter 'IncludeTags' must be a string.
+0x1491cd5e8	GetTouchingParts is not a valid member of Terrain
+0x1491cdda8	Enum.Material expected, got %s
+0x1491cddc8	Bad argument Enum.Material expected, got %s
+0x1491cddf8	Bad argument Enum.Material expected, got %s)
+0x1491cde78	SolidMaterialIndex value must be a number, got %s
+0x1491cdee8	Argument 2 missing or nil
+0x1491cdf20	Argument 3 missing or nil
+0x1491cdf40	Argument 4 missing or nil
+0x1491ce140	Bad argument materials[%d][%d][%d] to 'WriteVoxels' (Enum.Material expected, got %s)
+0x1491ce1a0	Bad argument occupancy[%d][%d][%d] to 'WriteVoxels' (number expected, got %s)
+0x1491ce1f0	Argument 1 must be a Region3
+0x1491ce230	Argument 3 must be array of channel ids
+0x1491ce298	Argument 3 must be a dictionary in channel ids
+0x1491ce390	Region's size must be as large as the resolution on all sides
+0x1491ce3d0	Resolution must be a power of 2
+0x1491d14f0	PublishService::tagEmoteAnimation: instance must be an AnimationClip.
+0x1491d7b60	FireClient: player argument must be a Player object
+0x1491dd828	InvokeClient: player argument must be a Player object
+0x1491dd860	InvokeClient: player %s must be a child of game.Players
+0x1491e0450	LoadAssetWithBytecodeAsync Content object must be an Instance
+0x14923aee0	Children of AnnotationsService must be annotations.
+0x14923e308	Child of collaborators service must be a collaborator
+0x1492429e0	AnalyticsService: instance must be a Player object.
+0x1492488c8	%s: positions must be an array
+0x149248938	%s: vertexIds must be a 2D array
+0x149248980	%s: element %d must be an array of 3 vertex ids
+0x1492489e8	%s: element %zu must be an array of 3 or 4 vertex ids
+0x149248ab0	%s: colors must be an array
+0x149248ad0	%s: alphas must be an array
+0x149248b80	%s: normals must be an array
+0x149248c08	%s: uvs must be an array
+0x149248c50	%s: faceIds must be an array
+0x149248ce8	%s: ids must be an array
+0x149248d08	%s: values must be an array or nil
+0x149248ed8	%s: vertexIds must be an array
+0x149248f70	%s: attributeIdArrays must be an array of arrays
+0x1492491d0	%s: faceIds must be an array the same size as vertexIds
+0x149249208	%s: attributeIds must be an array the same size as vertexIds
+0x149249780	Unable to find content provider, EditableMesh must be a descendant of the DataModel
+0x14924d4c8	Key '%s' is not a valid member of CSGOptions
+0x14924d568	Key '%s' is not a valid member of CSGConstraintOptions
+0x14924d610	GeometryService:FragmentAsync: `sites` must be an array where each element is either a Vector3 or an array of Vector3
+0x14924d720	GeometryService:SweepPartAsync: CFrames must be a non-empty array of Vector3
+0x14924d900	GeometryService:GenerateFragmentSites: Parameter 1 must be a BasePart.
+0x14924d950	GeometryService:GenerateFragmentSites: SiteSpacing must be a positive number.
+0x14924d9a0	GeometryService:GenerateFragmentSites: Radius must be a positive number.
+0x14925d020	headers value must be a dictionary!
+0x14925d7f8	HttpRequest.RequestType must be an Enum.HttpRequestType
+0x14925d910	Timeout value must be an integer.
+0x14925da08	HttpRequest.Priority must be a float
+0x14925da30	HttpRequest.Timeout must be a number
+0x14925da58	HttpRequest.CachePolicy must be an Enum.HttpCachePolicy
+0x14925da90	HttpRequest.OnMessage must be a function
+0x1492711b0	identities[{}] must be a ScopedInstanceIdentity and propertyNames[{}] a string.
+0x1492712c0	identities[{}] must be a ScopedInstanceIdentity and attributeNames[{}] a string.
+0x149271348	identities[{}] must be a ScopedInstanceIdentity.
+0x149276270	Setting Player.Team failed because team must be a child of the Teams service
+0x149279df0	Duration must be a positive number or -1
+0x14927a0b8	UserId must be a positive number
+0x14927c4d0	StarterPlayerScripts must be a child of StarterPlayer.  %s is not.
+0x1492823e8	%s in CharacterAppearance URL must be a valid number.
+0x1492994b0	Argument must be an 'AnimationClip' object
+0x14929f1c0	AvatarCreationService::PromptCreateAvatarAssetAsync invalid input - Makeup asset must be a Decal
+0x14929fdd8	Unexpected value in tokenIds, must be a string
+0x14929fe50	Unexpected value in tokenIds, string must be a valid creation token
+0x1492a86a0	Invalid BaseWrap: must be a WrapTarget or WrapLayer
+0x1492ab2d0	Invalid argument provided: startingIndex.
+0x1492ab300	Invalid argument provided: count.
+0x1492ad300	Argument must be a 'KeyframeSequence' object
+0x1492b4070	motors must be an array.
+0x1492b9228	Unexpected value in itemIds, must be an int
+0x1492b9450	Invalid assetId: must be a positive integer.
+0x1492b9c20	NoPromptCreateOutfit: outfitType must be an Enum.OutfitType or nil
+0x1492b9d00	PromptCreateOutfit: outfitType must be an Enum.OutfitType or nil
+0x1492ba150	Unexpected value in assetTypes, must be a memeber of Enum.AvatarAssetType
+0x1492bd550	CreateTextureInCageSpaceAsync: MinUVBounds must be a Vector2.
+0x1492bd5e0	CreateTextureInCageSpaceAsync: MaxUVBounds must be a Vector2.
+0x1492bf350	WrapDeformer:CreateEditableMeshAsync(): WrapDeformer must be a child of the DataModel
+0x1492d8f58	'{}' must be a table naming at least one rules category
+0x1492d8ff8	{} must be a table of properties
+0x1492eabb8	%s: '%s' must be a string; the expression is unchanged
+0x1492fe1b0	QuadraticPenaltyForm: nDof ({}) must be a positive multiple of A.cols ({})
+0x149474978	string length must be at least 1, is 
+0x14947d480	dialog must be a GuiObject instance
+0x14948e530	%s.AspectRatio set to a non-positive value. Value must be a positive.
+0x14948e580	AspectRatio styled to a non-positive value. Value must be a positive.
+0x14949a1d0	CreatePostAsync: postRequest.media must be an array
+0x14949a258	CreatePostAsync: media item must be a table
+0x14949a288	CreatePostAsync: media item avatar must be a table
+0x1494c3c28	Invalid edit: Text must be a string
+0x1494c3c50	Invalid edit: StartLine must be a number
+0x1494c3c80	Invalid edit: EndLine must be a number if provided
+0x1494c7648	Read-only reasons must be an array of non-empty strings
+0x1494d8228	tryUnifyNegations superTy or subTy must be a negation type
+0x1494dc560	Cannot assign a value of type 
+0x1494e79f0	invalid format specifier: must be a string format specifier or %
+0x1494e7a60	unexpected character; must be a pack specifier or space
+0x1494e7e20	unexpected replacement character; must be a digit or %
+0x1494e7eb0	unexpected replacement character; must be a date format specifier or %
+0x149530a28	CustomTag must be a string array
+0x149530a50	CustomTags must be a string array
+0x149530a78	Attributes must be an array.
+0x149530a98	Attributes must be an array of tables.
+0x149530ac0	Creator must be a table.
+0x149530f68	generateItemListAsync: LocationId must be a string
+0x149530fd8	BoostCustomTags must be a string array
+0x149531000	GenerateRecommendationItemListRequest: BoostCustomTags must be an array
+0x1495310e0	GenerateRecommendationItemListRequest: CustomContexts must be a table
+0x149547c50	 ignored: it must be an integer
+0x149566e38	Invalid arguments to grpc_alts_credentials_options_copy()
+0x149567660	type field must be a string.
+0x1495676d8	audience field must be a string.
+0x149567740	subject_token_type field must be a string.
+0x1495677c8	token_url field must be a string.
+0x149567910	token_lifetime_seconds must be a number
+0x14956dba8	Invalid arguments to grpc_gcp_rpc_protocol_versions_copy().
+0x14956dbe8	Invalid arguments to grpc_gcp_rpc_protocol_versions_check().
+0x14956ddc0	Invalid arguments to grpc_alts_auth_context_from_tsi_peer()
+0x14956dfc0	Invalid arguments to grpc_alts_channel_security_connector_create()
+0x14956e178	environment_id field must be a string.
+0x14956e1f0	region_url field must be a string.
+0x14956e270	regional_cred_verification_url field must be a string.
+0x14956e648	file field must be a string.
+0x14956e6c8	format.type field must be a string.
+0x14956e760	format.subject_token_field_name field must be a string.
+0x14956e7f8	Subject token field must be a string.
+0x14956e908	url field must be a string.
+0x14956eb38	Invalid arguments to get_unused_bytes()
+0x14956eb60	Invalid arguments to create_handshaker_result()
+0x14956eb90	Invalid arguments to handshaker_next()
+0x14956ebb8	Invalid arguments to local_tsi_handshaker_create()
+0x149570240	Invalid argument to handshaker_result_extract_peer()
+0x1495702e0	Invalid arguments to create_zero_copy_grpc_protector()
+0x1495703b0	Invalid arguments to handshaker_result_create_frame_protector()
+0x149570418	Invalid arguments to handshaker_result_get_unused_bytes()
+0x149570790	Invalid arguments to alts_tsi_handshaker_create()
+0x149570fe8	Invalid arguments to handshaker_client_start_server()
+0x149571048	Invalid arguments to handshaker_client_next()
+0x149571098	Invalid arguments to alts_handshaker_client_create()
+0x149572010	length must be at most 
+0x149581e28	Downloaded RBXM root instance must be a Model.
+0x1495828d0	[DFLog::GenerationService] Invalid argument count for event RequestGenerationReplication. Arguments: {}
+0x149582a10	' must be a string.
+0x149582d88	[FLog::Error] Unable to cast root instance to MeshPart.
+0x149583bb0	{} must be a {} in {}
+0x149583fc8	GuidanceParameter must be a finite number
+0x149583ff8	{} must be a finite number in [{}, {}]
+0x149584040	NumFrames must be at least {}
+0x149584060	NumFrames must be at most {}
+0x149584080	OutputFileName must be a base filename
+0x1495862d8	Segmented model root instance must be a Model
+0x149586c58	MaxTriangles must be at least 12
+0x149586c80	MaxTriangles must be at most 20000
+0x149586cf8	Image must be an rbxassetid:// or rbxasset:// URI
+0x149586ec0	SchemaDefinition.{} must be an array
+0x1495883e8	Generated RBXM root instance must be a Model
+0x1496125f0	TweenService:Create property named '%s' on object '%s' is read only
+0x149624e90	[FLog::Error] First value to HapticService:SetMotor is not a valid number (must be a number between 0-1)
+0x1496312b8	browserStartUrl must be a valid HTTPS URL
+0x149644b18	versionNumber must be a positive version number
+0x14967ae20	Must be a standard GUID
+0x14967bca0	Parent must be a DebuggerConnectionManager
+0x14967ea60	Must be a GUID ScriptRef
+0x149680de8	Must be a LuaSourceContainer
+0x149681a30	Parent must be a ThreadState
+0x149681a50	Child must be a DebuggerVariable
+0x149682440	Parent must be a DebuggerConnection
+0x149682468	Child must be a StackFrame
+0x149684bf8	Parent must be a StackFrame or DebuggerVariable
+0x14968a070	StudioDeviceSimulatorService: field 'DeviceForm' must be a valid Enum.DeviceForm value
+0x14acbb530	Parent must be a Qtitan::DockWidgetPanel for: {}
+0x14acc87d0	Argument Missing: {}
+0x14acf46b8	" must be a string, number, boolean, or nested table
+0x14acf47e0	configuration value for key "languagemode" must be a string
+0x14acf4820	configuration value for key "lint" must be a table
+0x14acf48d8	configuration value for key "linterrors" must be a boolean
+0x14acf4928	configuration value for key "typeerrors" must be a boolean
+0x14acf4970	configuration value for key "globals" must be an array of strings
+0x14acf4a38	configuration value in "globals" table must be a string
+0x14acf4a70	configuration value for key "aliases" must be a table
+0x14acf4b20	configuration value for key "luau" must be a table
+0x14ad6adc0	AudioDeviceBuffer must be attached before streaming can start
+0x14ad6ccb0	Frame size must be an integer multiple of 10 ms.
+0x14ad85380	Local and Remote descriptions must be applied to get the SSL Role of the session.
+0x14ada2338	Answerer must be active when offerer is passive
+0x14ada30e8	ms. The gap between tones must be at least 
+0x14ada7f38	There must be at least one coordinate provided
+0x14adb6ce0	The rampup acceleration maxout time must be above zero: 
+0x14adb70d0	The observation window size must be at least 2: 
+0x14addaea0	CalculateConstraintsToPreserve Error: source input must be a BasePart
+0x14addaef0	CalculateConstraintsToPreserve Error: parts in destination input must be a BasePart
+0x14addca30	the required argument for option '%canonical_option%' is missing
+0x14ae35698	Value must be a number
+0x14ae489b8	Synthetic oneofs must be after all other oneofs: %s
+0x14ae4f418	must be at least 2
+0x14aeaec60	settings frames must be a multiple of six bytes

@@ -1,0 +1,246 @@
+0x148a973b8	[FLog::SlowHttpRequest] request time %f, queue size %f
+0x148a9b718	ErrorConnection
+0x148aa2ed0	[FLog::ScreenProtocolCore] Received safe area insets: %f, %f, %f, %f
+0x148aa3c78	MessageBusConnection
+0x148aa68f8	[%.2f,%.2f,%.2f]
+0x148aaa720	[FLog::PhysicsImprovedCyclicExecutiveThrottleData] %4.4f, %4.4f, %4.4f, %4.4f
+0x148aaa820	[FLog::WorldStepsBehindG] Number of WorldSteps behind, wsps, deltaTime: %f  %f  %f
+0x148aaceff	A[FLog::CyclicExecutiveThrottling] DataModel::PhysicsStep dt: %f, dtCyclicExecutive: %f, dutyDt: %f
+0x148aae988	[FLog::NewNetworkPhysicsLog] Start Frame: %f, %f, %f
+0x148aae9c0	[FLog::NewNetworkPhysicsLog] End   Frame: %f, %f, %f
+0x148ab4840	Attempt to spherecast with radius %f. The maximum radius is %f.
+0x148ab48b0	Attempt to shapecast with side length %f. The maximum side length is %f.
+0x148ab4900	Attempt to blockcast with side length %f. The maximum side length is %f.
+0x148ab4950	Attempt to shapecast with distance %f. The maximum distance is %f.
+0x148ac72a8	[%.2f, %.2f, %.2f]
+0x148ae235e	T_NonLev = (%.2f, %.2f, %.2f)
+0x148b71a08	MemStorageConnection
+0x148b80048	isNewConnection
+0x148c4a0f0	setupLuaFlagValueChangedConnection
+0x148c55060	[FLog::NavigationDetail] add climbable link top: [%d, %d, %d ] [%.02f,%.02f,%.02f] bottom: [%d, %d, %d ] [%.02f,%.02f,%.02f]
+0x148c8c898	TeamCreate-HandleConnection
+0x148c90658	StudioFriendToConnection
+0x148ca0398	RemoteDebuggerNetworkHandler/startConnection
+0x148cb9818	nav: {%.1f %.1f %.1f}
+0x148cb9840	pos: {%.0f %.0f}
+0x148cb9858	delta: {%.1f %.1f}
+0x148cb98e0	: {%.2f %.2f}
+0x148cd8ba8	requiresTrustedConnection
+0x148d23938	PlaySolo-GameShutdownConnection
+0x148d71f08	SendsGoThroughConnection
+0x148d74ac0	You are serializing a matrix with a value range too large for compression: [%f, %f] (max = %f)
+0x148d74ea8	Connection
+0x148d84e18	vid: %.2f sys: %.2f
+0x148d88140	%5.2f %3.1fx
+0x148d88610	Time[%6.2f] Avg[%6.2f] Max[%6.2f]
+0x148dc0110	MakeCounter(%d, %d, %d, %d, %d, '%s', %lld, %lld, %lld, '%s', %lld, '%s', %d, %f, %f, [
+0x148dc1b00	[DFLog::PercentileReportStats] Phase%d Percentile Aggregate %s: P0: %.2f, P5: %.2f, P10: %.2f, P20: %.2f, P50: %.2f, P90: %.2f, P99: %.2f, P100: %.2f, Avg: %.2f, Samples: %d
+0x148dc1bb0	[DFLog::PercentileReportStats] Phase%d Percentile Aggregate %s: P0: %.2f, P5: %.2f, P10: %.2f, P20: %.2f, P50: %.2f, P90: %.2f, P99: %.2f, P100: %.2f, Avg: %.2f
+0x148dd7fd0	[DFLog::HttpTraceLight] HttpResponse(#%u %p) time:%.01fms (net:%.01fms) redirected from url:"%s" to url: "%s"
+0x148dd8170	[DFLog::TrackHttpRequest] [httptrack] new priority (%f => %f) req:%p from %s
+0x148dda260	ReusedConnection
+0x148dda278	NewConnection
+0x148ddbde0	[DFLog::HttpTraceLight] Fixed backoff processing: Endpoint: %s,  Retry Time from header: %f, Retry Time set: %f
+0x148f05be0	Proxy-Connection
+0x148f23300	invalid argument #%d to '%s' (%s)
+0x148f23328	invalid argument #%d (%s)
+0x148f23348	invalid argument #%d to '%s' (%s expected, got %s)
+0x148f23380	invalid argument #%d (%s expected, got %s)
+0x148f233b0	missing argument #%d to '%s' (%s expected)
+0x148f233e0	missing argument #%d (%s expected)
+0x148f23428	missing argument #%d
+0x148f23800	attempt to %s a %s value
+0x148f23850	attempt to concatenate %s with %s
+0x148f23878	attempt to perform arithmetic (%s) on %s
+0x148f238a8	attempt to perform arithmetic (%s) on %s and %s
+0x148f238d8	attempt to compare %s %s %s
+0x148f238f8	attempt to index %s with '%s'
+0x148f23918	attempt to index %s with %s
+0x148f23980	attempt to call missing method '%s' of %s
+0x148f239b0	attempt to modify a readonly table
+0x148f252a0	(%g, %g, %g)
+0x148f252b0	%g, %g, %g
+0x148f252f8	[%g, %g, %g; %g, %g, %g; %g, %g, %g]
+0x148fc87e0	System::createDSPConnection
+0x148fc8fd0	%p:{%g,%g,%g}
+0x148fe04b0	DebugLocalRccServerConnection
+0x148fe2558	isRbxConnection
+0x148fe27e0	Requested Connection
+0x148fe3548	IsDeadConnection
+0x148fe5d78	RakNetEarlyOutDeadConnection
+0x148fe67b0	[DFLog::TxBwStatLog] TxBwStats#1 : availableCapacity = %d; totalAvailableCapacity = %d; availableCapacityKBps=%.2f; totalAvailableCapacityKBps=%.2f; highWaterMarkFortotalAvailableCapacityKBps=%.2f; allBytes = %d; reliablePacketBytes = %d; reliablePackets = %d; reliablePacketBytesRe = %d; reliablePacketsRe = %d; unreliablePacketBytes = %d; unreliablePackets = %d; actualRawBwUsedKBps = %.2f; actualBwUsedForAllTransmissionKBps = %.2f; actualBwUsedForNewTransmissionsKBps = %.2f; actualBwUsedForReTransmissionKBps = %.2f; collectionDurationInSeconds = %.2f; unusedAvailableBwKBps = %.2f actualTotalGetTxBwCount=%d; bwLimitedByAppCountToTotalCount=%.2f zeroTargetSpeedStartTimeCountToTotalCount=%.2f; nonZeroTargetSpeedStartTimeCountToTotalCount=%.2f; uncappedByteAllowanceFromTargetSpeedInKBps=%.2f;
+0x148fe6ad0	[DFLog::TxBwStatLog] TxBwStats#2 : bwGivenByTargetSpeedKBps=%.2f; highWaterMarkForBwFromTargetSpeedKBps=%.2f; bwCappedDueToTargetSpeedCountToTotalCount=%.2f; bwCappedDueTo2xTargetSpeedCountToTotalCount=%.2f; bwcappedDueToMaxBytesInFlightCountToTotalCount=%.2f; bwCappedDueToMaxPacketsInFlightCountToTotalCount=%.2f; bwCappedDueToAllBytesInFlightLostCountToTotalCount=%.2f
+0x148ff0810	[DFLog::RVideoTrace] RvFlvFormat::writePacket(%s) - pts %.f, %10.03f
+0x1490963d8	RbxTransport/RtcIo/Remote/AcceptConnection
+0x149096460	RbxTransport/RtcIo/Remote/NewAppConnection
+0x1490968b8	RtcIoRna::createConnection
+0x149096c08	RbxTransportRnaExpConnection
+0x149099af0	RtcAppConnection
+0x149099b08	~RtcAppConnection
+0x14909da48	H3Connection
+0x14909f220	RbxTransportQuicConnection
+0x1490b6498	ScopedConnection
+0x1490bbaf0	, Density: %.2f, 0-Bins: %.0f%%, 1-Bins: %.0f%%, 2-Bins: %.0f%%, 3-Bins: %.0f%%, Median: %d, Max: %d, Collisions: %.1f
+0x1490bbbb0	    BroadPhaseColliderBinding distribution: 0-cells: %.0f%%, 1-cells: %.0f%%, 2-cells: %.0f%%, largest: %d-cell, median: %d-cell, 90%%: %d-cells, average: %.2f
+0x1490c6620	frame %.1f render %1.f
+0x1490c6660	[FLog::FRM] FRM status. Frame time average: %f, Delay up %f, Delay down %f
+0x1490ce8f0	RealtimeMedia::PendingPermissionConnection
+0x1490df920	[DFLog::VideoFeatureControlTrace] VideoFeatureControl::reportVideoStats rebuffering old %f new %f
+0x1490df990	[DFLog::VideoFeatureControlTrace] VideoFeatureControl::reportVideoStats decodeTime old %f new %f
+0x1490eb060	RBXScriptConnection
+0x1490ed528	<Vector3> %.14g, %.14g, %.14g
+0x1490ed740	Vector3(%.14g, %.14g, %.14g)
+0x1490ed8a0	%s is not a valid member
+0x1490eedf8	%s is not a valid member of "Enum"
+0x1490eee50	%s is not a valid member of "Enum.%s"
+0x1490eee88	%s is not a valid member of "Enum.%s.%s"
+0x1490f0640	%s is not a valid member of %s "%s"
+0x1490f06e8	%s is not a valid member of %s
+0x1490f49e0	%s cannot be assigned to
+0x1490f5b78	Tolerance outside bounds: Expected 0 - %f, got %f
+0x1490f6780	%s member of %s is read-only and cannot be assigned to
+0x1490f67b8	'%s' is not a valid member of %s
+0x1490f6d68	%s is not a valid member of RBXScriptSignal
+0x1490f7310	Scripts that connect in parallel must be rooted under an Actor.
+0x1490f7440	%s is not a valid member of RBXScriptConnection
+0x149119330	%.9g, %.9g, %.9g
+0x149124400	[FLog::CSG3Details] instanceTransform: partOperation scale: %f %f %f
+0x1491244a0	[FLog::CSG3Details] instanceTransform: partInstance scale: %f %f %f
+0x14912be40	LDLProgram Id: %d, Dim: %d, Ext Dim: %d, Ops: %.0f k, L Height Max / Ave: %d / %.0f, GigOps/s: %.2f / %.2f, Flops/Dim: %.0f, Initialization: %.2f / %.2f us, Elimination: %.2f / %.2f us, Total: %.2f / %.2f us
+0x14912c020	Total objective before=%.17g after=%.17g delta=%.17g status=%s
+0x14912c060	Inertial term before=%.17g after=%.17g
+0x14912c088	Constraint AL term before=%.17g after=%.17g
+0x14912c0b8	Implicit force term before=%.17g after=%.17g
+0x14912c550	%s %s linf=%.17g l2=%.17g component_count=%d nonfinite_components=%d
+0x14912c5a0	Worst index=%d component=%d contribution_a=%.17g contribution_b=%.17g residual=%.17g
+0x14912c5f8	Contribution scales A=%.17g B=%.17g
+0x149170ae8	%.1f/s (%.0f%%CV)
+0x149170b08	%g (%.0f%%CV)
+0x149193110	EnableFeatureRestrictionRealtimeRccSignalConnection
+0x14919b180	{} cannot be assigned to
+0x1491c0f80	[FLog::UserInputProfile] Panning camera, heading: %f, elevation: %f, distance: %f
+0x1491c93b8	ScopeTime is not a valid member of TestService
+0x1491cd5e8	GetTouchingParts is not a valid member of Terrain
+0x1491e8b30	[FLog::Graphics] Setting screen DPI scale to %.2f (was %.2f)
+0x1491f29b0	%.1f ms (prepare %.1f, perform %.1f, present %.1f, bonus %.1f)
+0x1491f2a08	%.1f ms (work %.1f, marshal %.1f, idle %.1f)
+0x1491f2c38	%.1f ms (present: %.1f ms) %s
+0x1491f3140	[FLog::ViewRbxBase] Render perform end. Delta: %f, Total %f, Present: %f, Prepare: %f
+0x1491f55f8	%.1f %.1f %.1f
+0x1492021a0	[FLog::RenderInstancedCluster2] binding 0x%p cframe [%.1f, %.1f, %.1f]
+0x149226620	[FLog::RenderLightGrid] LightGrid: Changing light direction to %f %f %f
+0x14923e1c8	RequiresTrustedConnection
+0x149241180	RequiresTrustedConnection
+0x1492414a0	RequiresTrustedConnection
+0x14924d4c8	Key '%s' is not a valid member of CSGOptions
+0x14924d568	Key '%s' is not a valid member of CSGConstraintOptions
+0x14925abf0	[FLog::HttpRbxApiBudget] Adding budget %f, default budget is at: %f, elevated budget is at: %f
+0x14925ac50	[FLog::HttpRbxApiBudget] Adding budget %f, client budget is at: %f
+0x14925acf0	[FLog::HttpRbxApiBudget] Executing retry requests, size: %f, budget: %f
+0x14925ad40	[FLog::HttpRbxApiBudget] Executing throttled requests, size: %f, budget: %f
+0x149268bb8	Invalid Wire Connection
+0x149276870	[DFLog::PartStreamingRequests] next spawn location = (%f,%f,%f)
+0x1492a62b0	[FLog::HumanoidFloorProcess] Obstacle Found, Moving to: %4.4f, %4.4f, %4.4f
+0x1492a6340	[FLog::HumanoidFloorProcess] Pre Friction Displacement: %4.4f, %4.4f, %4.4f
+0x1492a6390	[FLog::HumanoidFloorProcess] Platform displaced: %4.4f, %4.4f, %4.4f
+0x1492a63e0	[FLog::HumanoidFloorProcess] character Position in Object Space: %4.4f, %4.4f, %4.4f
+0x1492a6440	[FLog::HumanoidFloorProcess] New characterPosition in Object Space: %4.4f, %4.4f, %4.4f
+0x1492a7a10	[FLog::HumanoidFloorProcess] Check platform subscription Player Mass: %4.4f, Floor Mass: %4.4f
+0x1492a9520	Keyframe ['%f'] INVALID weight for '%s' => '%f'
+0x1492c1c20	[DFLog::TrackerLodControllerTrace] LOD processingTime = %f frameRate = %f running vote lodChangeVotes = %d bounds increase LOD bound = %d decrease LOD bound = %d newStateId = %d
+0x1492d1160	HSR generation for %s %s took %.1fms (mesh %zu faces, cage %zu faces): accelerationStructures %.1fms, innerCageVisibility %.1fms, meshToOuterCage %.1fms, outerCagePrep %.1fms, clusterOutsideFaces %.1fms
+0x1492d6310	contentId(%s) file(%zu,%s) times(%g/%g/%g/%g) cache(%s)
+0x1492d6ab0	[FLog::AvatarJoinMetrics]   spawnPosition = %g %g %g
+0x1492d6ae8	[FLog::AvatarJoinMetrics]   spawnDirection = %g %g %g
+0x1492d6b20	[FLog::AvatarJoinMetrics]   cameraPosition = %g %g %g
+0x1492d6b58	[FLog::AvatarJoinMetrics]   cameraDirection = %g %g %g
+0x1492d88f8	CharacterLoadingEventConnection
+0x1492f2100	%s: Duplicate position (%f, %f) found. The node will only use the first-added input
+0x14947c8a0	GuiServiceMenuConnection
+0x14947daa0	[FLog::SafeAreaInsetChanges] New safe area insets: left: %.1f, top: %.1f, right: %.1f, bottom: %.1f
+0x14947db10	[FLog::SafeAreaInsetChanges] New modified safe area insets: left: %.1f, top: %.1f, right: %.1f, bottom: %.1f
+0x14947fff0	[FLog::DebugQuadTreeLogging2] Input type %s, state %s, position [%f, %f] 
+0x1494a0e20	%.2f, %.2fB, %.2f
+0x1494a0f88	%.3f sec %.3f sec, %d
+0x1494a1d10	%.1f/s %.1f msec %d%%
+0x1494cc0d8	ShadowDataModelConnection
+0x1494cd6d0	@roblox/globaltype/RBXScriptConnection
+0x1494e6eb0	For loop ends at %g instead of %g; did you forget to specify step?
+0x1494f5ef8	[DFLog::PartStreamingRequests] centerPosition: (%f,%f,%f)
+0x1494fffe0	[DFLog::NetworkJDIImpact] Longest Single Frame Script Time ms : %f  Longest Single Frame Cpp Time ms : %f
+0x149506ae0	[DFLog::JoinDataRxStats] GameLoadProgressTime,lastSSArrive,%u,%f%%,SSDeserialized,%u,%f%%,gameLoadTagArrival,%u,%f%%,gameLoadTagDeserialize,%u,%f%%,gameLoadTagProcess,%u
+0x149506d70	[DFLog::JoinDataRxStats] GameLoadProgressCycle,lastSSArrive,%lu,%f%%,SSDeserialized,%lu,%f%%,gameLoadTagArrival,%lu,%f%%,gameLoadTagDeserialize,%lu,%f%%,gameLoadTagProcess,%lu
+0x149507260	[DFLog::JoinDataRxStats] Join Rx Times : deltaTimeBetweenJoinRequestAndFirstBlobArrival=%fms, deltaTimeBetweenJoinRequestAndJoinProcessingComplete=%fms, joinDataReadTime=%fms, joinDataProcessTime=%fms
+0x149507330	[DFLog::JoinDataRxStats] JoinData read breakdown : SharedStrings=%fms, Instance=%fms, BatchNetAssets=%fms
+0x1495073a0	[DFLog::JoinDataRxStats] JoinData read breakdown : SharedStrings=%fms, Instance=%fms
+0x149507490	[DFLog::JoinDataRxStats] JoinData byte breakdown percentage: percentageOfBytesInSS=%f%%, percentageOfBytesMeta=%f%%, percentageOfBytesWaste=%f%%, percentageOfBytesInstancesUseful=%f%%
+0x149507550	[DFLog::JoinDataRxStats] JoinData read time percentage : percentageReadTimeForSS=%f%%, percentageReadTimeForMetaInstances=%f%%
+0x149507990	[DFLog::JoinDataRxStats] Total Packet Deserialization Time : %f ms   Total Process Packet Time : %f ms
+0x149507a00	[DFLog::JoinDataRxStats] Process Deserialization Time : Cluster : %f ms   Data : %f ms
+0x149507a60	[DFLog::JoinDataRxStats] Process Packet Script Time : %f ms   ProcessPacket Cpp Time : %f ms
+0x149507ac0	[DFLog::JoinDataRxStats] Process Cluster Time : %f ms  Process Data Time : %f ms
+0x149508630	clientInstanceQuota %d, packet in queue %d, predictedTotalInstanceProcessTime %f, avgStreamDataReadTime %f, avgInstancesPerStreamData %f
+0x14950f0c8	LostReliableConnection
+0x149511670	LostConnection
+0x149518d90	[DFLog::NetworkPauseLogging] Setting pause exit buffer to %i studs. Ping: %.2f ms. Velocity %.2f
+0x14951ba00	%g %g %g %g %g %g
+0x14951f190	[FLog::Network] NetworkServer:NewIncomingConnection
+0x149520910	[DFLog::NetworkJoin] ~%s handled %zu instances over %u invocations %fms. %u from cache %u bytes sent (%u bytes uncompressed %fms compress time).
+0x149520b70	[DFLog::NetworkJoin] %s Finished writing %u instances %u from cache %u bytes %fms (%u bytes uncompressed %fms compress time)
+0x149521ca0	[FLog::Network] Initialized StreamingObserver. Physics: %.3fms Total: %.3fms
+0x149526368	network/ISR/Connection
+0x149529a98	[FLog::LogStepTimeAndNetworkUsage] %f, %f, %f, %f
+0x14952adc8	%.0f jitter:%.0f
+0x149544ea0	AresDNSResolver:%p attempt to cancel unknown TaskHandle:%s
+0x1495b1738	distance: %f, gain factor: %f, spread angle: %f
+0x1495ce288	 %f , %f 
+0x1495fd930	[FLog::NavigationDetail] JumpLink %s added from:[%d,%d,%d] [%.02f,%.02f,%.02f] to:[%d,%d,%d] [%.02f,%.02f,%.02f]
+0x14961d0e0	VirtualInput::SendMousePosition: position (%.1f, %.1f) hits CoreGUI.
+0x14961d160	VirtualInput::SendMouseButton: position (%.1f, %.1f) hits CoreGUI.
+0x14961d220	VirtualInput::SendPointerAction: position (%.1f, %.1f) hits CoreGUI.
+0x1496483d0	Studio.App.AutoReconnectDialog.AttemptingConnection
+0x14964efa0	SignalR_Failure_NoWebsocketConnection
+0x149672020	RemoteDebuggerConnection
+0x14967f1b8	FocusConnection
+0x14967f1e0	GetAvailableConnection
+0x149680060	Failed to cast to Local Debugger Connection
+0x149680c68	DebuggerConnection
+0x149682440	Parent must be a DebuggerConnection
+0x1496824d8	LocalDebuggerConnection
+0x1496bf658	PluginConnection
+0x14ac8ad68	[FLog::StudioApplicationManager] onNewConnection
+0x14acce550	VoiceChatNumClientSubscribeOperationFailedDueToMissingPeerConnection
+0x14acd3b68	No Connection
+0x14acd4070	VoiceFixRenegotiationNeededNullConnection
+0x14acd5da0	WebRTCConnection::SetupPublishConnection
+0x14acd5dd0	WebRTCConnection::SetupSubscriptionConnection
+0x14acd5ef8	WebRTCConnection::SetupCallingConnection
+0x14acd6e60	[FLog::VoiceChatLogs] WebRTCConnection::tearDownWebrtcConnections resetting publishPeerConnection
+0x14acd6ed0	[FLog::VoiceChatLogs] WebRTCConnection::tearDownWebrtcConnections resetting subscriptionPeerConnection
+0x14aced540	DebugLocalTeamCreateRccConnection
+0x14aced568	DebugLocalTeamTestRccConnection
+0x14acee630	[DFLog::BandwidthTracker] %s: bandwidth stabilized at %.2f Mbps, downloaded total %d bytes in %.2f sec from beginning
+0x14acf3de0	%.9g, %.9g, %.9g, %.9g
+0x14acf3df8	%.17g, %.17g, %.17g
+0x14acf3e10	%.17g, %.17g, %.17g, %.17g
+0x14acf8ee0	attempt to index vector with '%s'
+0x14ad84540	PeerConnection::~PeerConnection
+0x14adaf888	Enabled-%f,%f,%u
+0x14adb1858	Enabled-%d,%d,%d,%d,%d,%d,%d,%d,%f,%f,%d
+0x14ae2a800	 (timestamp=%u windowid=%u which=%u state=%u x=%g y=%g xrel=%g yrel=%g)
+0x14ae2a870	 (timestamp=%u windowid=%u which=%u button=%u state=%s clicks=%u x=%g y=%g)
+0x14ae2a900	 (timestamp=%u windowid=%u which=%u x=%g y=%g integer_x=%d integer_y=%d direction=%s)
+0x14ae2acd0	 (timestamp=%u which=%d touchpad=%d finger=%d x=%f y=%f pressure=%f)
+0x14ae2ad80	 (timestamp=%u which=%d sensor=%d data[0]=%f data[1]=%f data[2]=%f)
+0x14ae2ade0	 (timestamp=%u touchid=%I64u fingerid=%I64u x=%f y=%f dx=%f dy=%f pressure=%f)
+0x14ae2aea0	 (timestamp=%u windowid=%u which=%u pen_state=%u x=%g y=%g eraser=%s state=%s)
+0x14ae2afa0	 (timestamp=%u windowid=%u which=%u pen_state=%u x=%g y=%g axis=%s value=%g)
+0x14ae2b008	 (timestamp=%u windowid=%u which=%u pen_state=%u x=%g y=%g)
+0x14ae2b070	 (timestamp=%u windowid=%u which=%u pen_state=%u x=%g y=%g button=%u state=%s)
+0x14ae2b0f0	 (data='%s' timestamp=%u windowid=%u x=%f y=%f)
+0x14ae2b2b0	 (timestamp=%u which=%d data[0]=%f data[1]=%f data[2]=%f data[3]=%f data[4]=%f data[5]=%f)
+0x14aea2a48	%=%A%_%b%d%f%g%h%l%m%n%p%r%u
+0x14aea481f	/%=%A%_%b%d%f%g%h%l%m%n%p%r%u%:%B%C%D%E%F%G%H%I%J%K%L%M%N%O%P%Q%R%S%T%U%V%W%Y%j%k%q%v%w%x%y%z
+0x14aea7658	%0%1%2%a%c%e%i%o%=%A%_%b%d%f%g%h%l%m%n%p%r%u%:%B%C%D
+0x14aeada60	%/%3%4%5%6%7%8%9%=%A%_%b%d%f%g%h%l%m%n%p%r%u%:%B%C%D
+0x14cb66223	onNewConnection
